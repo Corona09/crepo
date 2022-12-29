@@ -1,0 +1,6 @@
+echo "1:$1"
+mkdir -p "$1/usr/bin/"
+mkdir -p "$1/usr/lib/node_modules/typescript"
+cp -R ./* "$1/usr/lib/node_modules/typescript"
+ln -s /usr/lib/node_modules/typescript/bin/tsc "$1/usr/bin/tsc"
+ln -s /usr/lib/node_modules/typescript/bin/tsserver "$1/usr/bin/tsserver"
